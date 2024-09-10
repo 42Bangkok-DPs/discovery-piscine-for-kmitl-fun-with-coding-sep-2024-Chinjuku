@@ -1,0 +1,28 @@
+body {
+    background-color: pink;
+}
+.bigtext {
+    color: white;
+    text-align: center;
+}
+.bigbox {
+    display: flex;
+    margin: 50px 0;
+}
+.smbox {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+hr {
+    color: black;
+}
+
+.footer {
+    display: flex;
+    justify-content: end;
+    padding: 0 20px;
+}
