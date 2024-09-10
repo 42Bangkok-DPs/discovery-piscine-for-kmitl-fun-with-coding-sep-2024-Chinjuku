@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+}
+
+.responsive-table {
+    width: 100%;
+    height: 300px;
+    border: 1px solid black;
+}
+
+.first-cell {
+    background-color: red;
+    width: 50%;
+    border: 1px solid black;
+}
+
+.second-cell {
+    background-color: green;
+    width: 50%;
+    border: 1px solid black;
+}
+
+@media (max-width: 1040px) {
+    .responsive-table {
+        height: 200px;
+    }
+}
+
+@media (max-width: 500px) {
+    .first-cell, .second-cell {
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    .responsive-table {
+        border: none;
+    }
+
+    .first-cell, .second-cell {
+        border-bottom: 1px solid black;
+    }
+}

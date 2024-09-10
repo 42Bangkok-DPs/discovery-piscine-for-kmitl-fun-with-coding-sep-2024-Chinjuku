@@ -1,22 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Basics</title>
-    <link rel="stylesheet" href="./style.css" />
+    <style>
+        body {
+            background-color: pink;
+        }
+
+        .bigtext {
+            color: white;
+            text-align: center;
+        }
+
+        .bigbox {
+            display: flex;
+            margin: 50px 0;
+        }
+
+        .smbox {
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 30px;
+        }
+
+        hr {
+            color: black;
+        }
+
+        .footer {
+            display: flex;
+            justify-content: end;
+            padding: 0 20px;
+        }
+        img {
+            width: 50%;
+        }
+    </style>
 </head>
 
 <body>
     <h1 class="bigtext">-so bigger-@</h1>
     <div class="bigbox">
         <div class="smbox">
-            <img width="500" height="300" src="./react-design.png" alt="">
-            <a href="https://react.dev/">Link to react</a>
+            <img src="https://www.leceipt.com/wp-content/uploads/2021/11/lazada-logo.jpg" alt="">
+            <a href="https://www.lazada.co.th/?dsource=share&laz_share_info=1052196490_1_9300_100717936049_1052196490_null&laz_token=f5cc90fcc61887c5b1d5547b31d6ac71&trafficFrom=17449020_21419790_303586&laz_trackid=2:mm_294091166_189852503_2146652503:clkgg5o4f1i7dgbbjhk9qa&mkttid=clkgg5o4f1i7dgbbjhk9qa#?">Link to Lazada</a>
         </div>
         <div class="smbox">
-            <img width="500" height="300" src="./tailwind-design.png" alt="">
-            <a href="https://tailwindcss.com/">Link to tailwind</a>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYbXe4tmCN63hgnPz8z6F2KByiQvbh4ymOBg&s" alt="">
+            <a href="https://shopee.co.th/?gad_source=1&gclid=CjwKCAjw3P-2BhAEEiwA3yPhwMd_nuUsFP3NpIkwcREYF7nho19MkSnHseffgJ6Geuto8zxfY8H2JRoCQxAQAvD_BwE">Link to Shopee</a>
         </div>
     </div>
     <hr>
@@ -24,4 +60,5 @@
         <p><i>© wil2021</i></p>
     </div>
 </body>
+
 </html>
