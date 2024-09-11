@@ -7,21 +7,43 @@
 .big-pic1, .big-pic2, .big-pic3 {
     position: relative;
     width: 100%;
-    height: 700px;
-    background-color: black;
+    height: 100vh;
+}
+
+.big-pic1, .big-pic3 {
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+.big-pic1 {
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR98hchtxm5z6tSPzxLyoy1gDUHCkaqSvtdjg&s');
+}
+
+.big-pic3 {
+    background-image: url('https://d2zp5xs5cp8zlg.cloudfront.net/image-66559-800.jpg');
 }
 
 img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: none;
 }
 
 .paragraph1, .paragraph2, .paragraph3 {
     position: absolute;
     top: 50%;
     left: 50%;
+    transform: translate(-50%, -50%);
     color: white;
+    font-size: 48px;
+    text-align: center;
+    z-index: 1;
+}
+
+.big-pic2 {
+    background-color: black;
 }
 
 

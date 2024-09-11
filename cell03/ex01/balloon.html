@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #el {
+            transition: width 0.5s, height 0.5s;
+        }
+        .balloon {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="el" class="balloon">
+    </div>
+    <script>
+        var element = document.getElementById("el");
+        widthss = document.getElementById('el').offsetWidth;
+        heightss = document.getElementById('el').offsetWidth;
+        let clickCount = 0;
+        
+        element.onclick = function() {
+            clickCount++;
+            element.style.width = (widthss + (10 * clickCount)) + 'px';
+            element.style.height = (heightss + (10 * clickCount)) + 'px';
+            switch (clickCount % 3) {
+                case 1:
+                    element.style.backgroundColor = 'red';
+                    break;
+                case 2:
+                    element.style.backgroundColor = 'green';
+                    break;
+                case 0:
+                    element.style.backgroundColor = 'blue';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
+
