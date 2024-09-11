@@ -11,12 +11,21 @@ body {
     height: 100vh;
     gap: 20px;
 }
-h1 {
+.h1 {
     font-size: 36px;
+}
+.smalltext1 {
+    color: blueviolet;
+    font-size: 24px;
+}
+.smalltext2 {
+    color: green;
+    font-size: 20px;
+    font-weight: bold;
 }
 .card {
     min-width: 550px;
-    min-height: 800px;
+    height: 750px;
     border: 1px solid black;
 }
 img {
@@ -26,7 +35,11 @@ img {
 }
 .content {
     height: 47%;
-    display: block;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
 }
 button {
     width: 100%;
@@ -34,4 +47,8 @@ button {
     background-color:cadetblue;
     color: white;
     font-size: 24px;
+}
+.svg {
+    display: flex;
+    gap: 25px;
 }
