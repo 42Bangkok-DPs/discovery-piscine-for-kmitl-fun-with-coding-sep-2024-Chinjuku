@@ -3,3 +3,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.chinpic {
+    background-image: url("../picture/chinjung2.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
