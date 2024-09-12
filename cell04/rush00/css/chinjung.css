@@ -1,0 +1,64 @@
+@font-face {
+    font-family: 'CustomFont';
+    src: url('../font/Lato/Lato-Regular.ttf');
+}
+
+* {
+    font-family: CustomFont;
+}
+
+.pics {
+    background-image: url("../picture/work.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.chinjung {
+    background-image: url("../picture/chinjung1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.scroll-container {
+    overflow: hidden;
+    white-space: nowrap;
+    position: relative;
+}
+
+.scroll-content {
+    display: flex;
+    position: absolute;
+    animation: scroll-right 10s linear infinite;
+}
+
+.scroll-content2 {
+    display: flex;
+    position: absolute;
+    animation: scroll-left 10s linear infinite;
+}
+
+.scroll-content img, .scroll-content2 img {
+    width: 200px;
+}
+
+@keyframes scroll-right {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+/* Animation Pause when Hovered */
+.scroll-content:hover, .scroll-content2:hover {
+    animation-play-state: paused;
+}

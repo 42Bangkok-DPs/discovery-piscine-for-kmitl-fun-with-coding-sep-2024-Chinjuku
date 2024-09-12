@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="./css/index.css">
+    <title>Hover Overlay Effect</title>
+</head>
+<body class="overflow-x-hidden overflow-y-hidden h-screen">
+    <div class="h-[10%] flex items-center justify-center py-[20px] bg-blue-900">
+        <h1 class="text-5xl font-bold text-white">Our Portfolios</h1>
+    </div>
+    <div class="h-[90%] w-full flex items-center justify-center gap-[30px]">
+        <div class="relative h-[75%] w-[40%] flex flex-col items-center justify-center gap-[20px]">
+            <a href="chinjung.html" class="relative w-[55%] h-full flex flex-col items-center justify-center group gap-5">
+                <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 group-hover:h-full h-0 w-full transition-opacity duration-300"></div>
+                <span class="absolute text-white text-4xl font-bold opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10 transition-all duration-300 ease-in-out">Click Me!</span>
+                <div class="bg-black w-[90%] h-[80%] z-9"></div>
+                <h2 class="text-4xl z-9 text-white font-bold">Chinatip Wu</h2>
+                <p class="text-white text-xl">65070052</p>
+            </a>
+        </div>
+        <div class="relative h-[75%] w-[40%] flex flex-col items-center justify-center gap-[20px]">
+            <a href="#" class="relative w-[55%] h-full flex flex-col items-center justify-center group gap-5">
+                <div class="absolute inset-0 bg-black opacity-0 group-hover:opacity-50 group-hover:h-full h-0 w-full transition-opacity duration-300"></div>
+                <span class="absolute text-white text-4xl font-bold opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10 transition-all duration-300 ease-in-out">Click Me!</span>
+                <div class="bg-black w-[90%] h-[80%] z-9"></div>
+                <h2 class="text-4xl z-9 text-white font-bold text-center">Anuwattipong Phonsumran</h2>
+                <p class="text-white text-xl">65070248</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
