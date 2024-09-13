@@ -27,16 +27,16 @@ $(document).ready(function () {
         $('#ft_list').children().each(function () {
             tasks.push($(this).text());
         });
-
-        document.cookie = `tasks=${JSON.stringify(tasks)}; path=/; expires=Fri, 31 Dec 9999 23:59:59 GMT`;
+        document.cookie = "tasks=" + encodeURIComponent(JSON.stringify(tasks));
     }
 
     function loadTasks() { 
-        const cookies = document.cookie.split('; ');
-        const taskCookie = cookies.find(row => row.startsWith('tasks='));
+        let value = "; " + document.cookie;
+        let parts = value.split("; tasks=");
+        let taskCookie = parts.pop().split(";").shift();
         
         if (taskCookie) {
-            const tasks = JSON.parse(taskCookie.split('=')[1]);
+            const tasks = JSON.parse(decodeURIComponent(taskCookie));
             $.each(tasks, function(index, task) {
                 const $taskDiv = $('<div></div>').text(task);
                 $taskDiv.on('click', function () {
