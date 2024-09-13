@@ -7,27 +7,47 @@
     <link rel="stylesheet" href="./css/index.css">
     <title>Hover Overlay Effect</title>
 </head>
-<body class="overflow-x-hidden overflow-y-hidden h-screen">
-    <div class="h-[10%] flex items-center justify-center py-[20px]">
-        <h1 class="text-5xl font-bold text-white">Our Portfolios</h1>
+<body class="min-[680px]:overflow-x-hidden min-[680px]:overflow-y-hidden min-[680px]:h-screen h-full">
+    <div class="h-[10%] max-[680px]:h-[100px] max-[1100px]:h-[100px] flex items-center justify-center py-[20px]">
+        <h1 class="text-5xl max-[680px]:text-3xl max-[1100px]:text-5xl font-bold text-white">Our Portfolios</h1>
     </div>
-    <div class="h-[90%] w-full flex items-center justify-center gap-[30px]">
-        <div class="relative h-[75%] w-[40%] flex flex-col items-center justify-center gap-[20px]">
-            <a href="chinjung.html" class="relative w-[55%] h-full flex flex-col items-center justify-center group gap-5">
+    <div class="hidden min-[680px]:h-[90%] h-full w-full block min-[680px]:flex items-center justify-center gap-[30px]">
+        <div class="relative h-[75%] max-[1100px]:w-1/2  w-[40%] min-[680px]:flex flex-col items-center justify-center gap-[20px]">
+            <a href="chinjung.html" class="relative w-[55%] max-[800px]:w-4/5 max-[1100px]:py-6 h-full flex flex-col items-center justify-center group gap-5">
                 <div class="chinpic absolute inset-0 group-hover:opacity-70 group-hover:h-full w-full transition-opacity duration-300"></div>
                 <span class="absolute text-white text-4xl font-bold opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10 transition-all duration-300 ease-in-out">Click Me!</span>
                 <div class="bg-black w-[90%] h-[80%] z-9"></div>
-                <h2 class="text-4xl z-[100] text-white font-bold opacity-100">Chinatip Wu</h2>
+                <h2 class="text-4xl z-[100] text-white  max-[1100px]:text-2xl font-bold opacity-100">Chinatip Wu</h2>
                 <p class="z-[100] text-white text-xl opacity-100">65070052</p>
             </a>
         </div>
-        <div class="relative h-[75%] w-[40%] flex flex-col items-center justify-center gap-[20px]">
-            <a href="mean.html" class="relative w-[55%] h-full flex flex-col items-center justify-center group gap-5">
+        <div class="relative h-[75%] max-[1100px]:w-1/2  w-[40%] flex flex-col items-center justify-center gap-[20px]">
+            <a href="mean.html" class="relative w-[55%] max-[800px]:w-4/5 max-[1100px]:py-6 h-full flex flex-col items-center justify-center group gap-4">
                 <div class="meanpic absolute inset-0 group-hover:opacity-70 group-hover:h-full w-full transition-opacity duration-300"></div>
                 <span class="absolute text-white text-4xl font-bold opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10 transition-all duration-300 ease-in-out">Click Me!</span>
                 <div class="bg-black w-[90%] h-[80%] z-9"></div>
-                <h2 class="text-4xl z-[100] text-center text-white font-bold opacity-100">Anuwattipong Phonsumran</h2>
+                <h2 class="text-3xl z-[100] text-center max-[1100px]:text-xl  text-white font-bold opacity-100">Anuwattipong Phonsumran</h2>
                 <p class="z-[100] text-center text-white text-xl opacity-100">65070248</p>
+            </a>
+        </div>
+    </div>
+    <div class="min-[680px]:hidden w-full h-[800px] min-[550px]:h-[1000px] gap-20 flex flex-col items-center mb-20">
+        <div class="relative h-[75%] w-[70%] min-[680px]:flex flex-col items-center justify-center gap-[20px]">
+            <a href="chinjung.html" class="relative w-full h-full flex flex-col items-center justify-center group gap-5 py-5">
+                <div class="chinpic absolute inset-0 group-hover:opacity-70 group-hover:h-full w-full transition-opacity duration-300"></div>
+                <span class="absolute text-white text-4xl font-bold opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10 transition-all duration-300 ease-in-out">Click Me!</span>
+                <div class="bg-black w-[90%] h-[80%] z-9"></div>
+                <h2 class="text-3xl z-[100] text-white font-bold opacity-100">Chinatip Wu</h2>
+                <p class="z-[100] text-white text-lg opacity-100">65070052</p>
+            </a>
+        </div>
+        <div class="relative h-[75%] w-[70%] min-[680px]:flex flex-col items-center justify-center gap-[20px]">
+            <a href="mean.html" class="relative w-full h-full flex flex-col items-center justify-center group gap-5 py-5">
+                <div class="meanpic absolute inset-0 group-hover:opacity-70 group-hover:h-full w-full transition-opacity duration-300"></div>
+                <span class="absolute text-white text-4xl font-bold opacity-0 group-hover:opacity-100 group-hover:translate-y-0 translate-y-10 transition-all duration-300 ease-in-out">Click Me!</span>
+                <div class="bg-black w-[90%] h-[80%] z-9"></div>
+                <h2 class="text-xl z-[100] text-white font-bold opacity-100">Anuwattipong Phonsumran</h2>
+                <p class="z-[100] text-white text-lg opacity-100">65070248</p>
             </a>
         </div>
     </div>

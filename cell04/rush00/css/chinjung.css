@@ -37,9 +37,7 @@
     animation: scroll-left 10s linear infinite;
 }
 
-.scroll-content img, .scroll-content2 img {
-    width: 200px;
-}
+
 
 @keyframes scroll-right {
     0% {

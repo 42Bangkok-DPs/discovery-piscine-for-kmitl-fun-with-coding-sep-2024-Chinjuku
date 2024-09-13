@@ -1,0 +1,74 @@
+.mean {
+  background-image: url("../picture/mean.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.pics {
+  background-image: url("../picture/noodle.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.relative {
+  position: relative;
+}
+
+.absolute {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+}
+/* @media (max-width: 768px) {
+  .pics {
+    display: none;
+  }
+
+  .mean {
+    width: 250px;
+    height: 250px;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  .text-white {
+    text-align: center;
+  }
+
+  .gap-40px {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mean {
+    width: 200px;
+    height: 200px;
+  }
+
+  .text-white h1 {
+    font-size: 2.5rem;
+  }
+
+  .text-white p {
+    font-size: 1rem;
+  }
+}
+.text-white h1 {
+  font-size: 3vw;
+}
+
+.mean {
+  width: 30vw;
+  height: 30vw;
+}
+.bg-white {
+  width: auto;
+  height: auto;
+  padding: 10px 20px;
+} */

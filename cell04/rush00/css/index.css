@@ -9,3 +9,9 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+.meanpic {
+    background-image: url("../picture/indexmean.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
