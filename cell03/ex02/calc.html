@@ -6,21 +6,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Document</title>
 </head>
-<body>
-    <div class="grid grid-cols-4">
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button>/</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button>x</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button>-</button>
-        
+<body class="flex flex-col justify-center items-center h-screen gap-5">
+    <div>
+        <input class="w-14 border rounded-md border-black" id="firstnum" type="number">
+        <select class="border rounded-md border-black" name="cal" id="cal">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="mul">*</option>
+            <option value="devide">/</option>
+            <option value="mod">%</option>
+        </select>
+        <input class="w-14 border rounded-md border-black" id="secnum" type="number">
+        <button onclick="calculate()">Try me!</button>
     </div>
+    <div class="flex gap-4 w-[700px] justify-center items-center">
+        <p>The result is : </p><input id="result" readonly class="w-24" value="None" />
+    </div>
+    <script>
+        setInterval(() => {
+            alert("Please, use me...");
+        }, 30000);
+        const firstnum = document.getElementById("firstnum")
+        const secnum = document.getElementById("secnum")
+        const cal = document.getElementById("cal")
+        const get = document.getElementById("result")
+        var result = 0
+        const calculate = () => {
+            if (cal.value === "plus") result = parseInt(firstnum.value) + parseInt(secnum.value)
+            else if (cal.value === "minus") result = parseInt(firstnum.value) - parseInt(secnum.value)
+            else if (cal.value === "mul") result = parseInt(firstnum.value) * parseInt(secnum.value)
+            else if (cal.value === "devide") result = parseInt(firstnum.value) / parseInt(secnum.value)
+            else if (cal.value === "mod") result = parseInt(firstnum.value) % parseInt(secnum.value)
+
+            console.log(result)
+            if (result < 0)  return alert("Error :(")
+            else if (result > 9000)  return alert("It’s over 9000!")
+            else {
+                get.value = Math.floor(result)
+            }
+        }
+    </script>
 </body>
 </html>
