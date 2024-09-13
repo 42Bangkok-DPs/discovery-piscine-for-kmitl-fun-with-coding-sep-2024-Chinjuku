@@ -9,7 +9,9 @@ function showCertificate1(data) {
 }
 function showActivities(data) {
   image.src = data;
-  image.style.height = "600px";
+  image.style.height = "400px";
+  image.style.width = "auto";
+  image.style.borderRadius = "40px"
   box.style.height = "600px";
   box.style.transition = ".5s";
   image.style.transition = ".5s";
