@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>It’s over 9000</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+        input, select {
+            margin: 10px;
+            padding: 10px;
+        }
+        button[type="submit"] {
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <form id="calculatorForm">
+        <input type="text" id="leftMember" placeholder="Left">
+        <select id="operator">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+            <option value="%">%</option>
+        </select>
+        <input type="text" id="rightMember" placeholder="Right">
+        <button type="submit">Try me!</button>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $('#calculatorForm').on('submit', function(event) {
+            event.preventDefault();
+
+            const leftMember = parseInt($('#leftMember').val());
+            const rightMember = parseInt($('#rightMember').val());
+            const operator = $('#operator').val();
+
+            if (isNaN(leftMember) || isNaN(rightMember) || leftMember < 0 || rightMember < 0) {
+                alert('Error :(');
+                console.log('Error :(');
+                return;
+            }
+
+            let result;
+
+            switch (operator) {
+                case '+':
+                    result = leftMember + rightMember;
+                    break;
+                case '-':
+                    result = leftMember - rightMember;
+                    break;
+                case '*':
+                    result = leftMember * rightMember;
+                    break;
+                case '/':
+                    if (rightMember === 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                        return;
+                    }
+                    result = leftMember / rightMember;
+                    break;
+                case '%':
+                    if (rightMember === 0) {
+                        alert("It’s over 9000!");
+                        console.log("It’s over 9000!");
+                        return;
+                    }
+                    result = leftMember % rightMember;
+                    break;
+                default:
+                    alert('Error :(');
+                    return;
+            }
+
+            alert(`Result: ${result}`);
+            console.log(result);
+        });
+
+        // Use jQuery to display the alert every 30 seconds
+        setInterval(() => {
+            alert('Please, use me...');
+        }, 30000);
+    </script>
+</body>
+</html>
