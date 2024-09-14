@@ -9,12 +9,10 @@
 </head>
 <body>
     <button id="colorButton">Change Background Color</button>
-
     <script>
         function getRandomColor() {
             // array ของ character ตั้งแต่ 0-15
             const letters = '0123456789ABCDEF';
-            let color = '#';
             for (let i = 0; i < 6; i++) {
                 // Math.random() = range 0-0.9999, .floor ปัดลง 
                 color += letters[Math.floor(Math.random() * 16)];

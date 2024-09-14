@@ -25,7 +25,7 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> 
     <script>
         const $balloon = $('.balloon');  
-        const colors = ['red', 'green', 'blue'];
+        const colors = ['red', 'green', 'blue', 'pink', 'black'];
         let colorIndex = 0;
         let size = 200;
 
@@ -42,6 +42,7 @@
             $balloon.css({
                 backgroundColor: colors[colorIndex]
             });
+            console.log(colorIndex)
         });
     
         $balloon.on('mouseleave', function () {
@@ -49,8 +50,7 @@
             if (size < 200) {
                 size = 200;
             }
-            colorIndex = (colorIndex + 2) % colors.length;
-            console.log(colorIndex)
+            colorIndex = (colorIndex-1 + colors.length) % colors.length;
             $balloon.css({
                 width: `${size}px`,
                 height: `${size}px`,
@@ -58,6 +58,5 @@
             });
         });
     </script>
-    
 </body>
 </html>
